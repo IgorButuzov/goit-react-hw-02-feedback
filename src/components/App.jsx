@@ -1,7 +1,11 @@
+import {SelectServiceLevel} from '../components/SelectServiceLevel/SelectServiceLevel';
+import {Statistics} from '../components/Statistics/Stat';
+
 export const App = () => {
   return (
     <div>
-      hello bia
+    <SelectServiceLevel />
+    <Statistics />
     </div>
   );
 };
