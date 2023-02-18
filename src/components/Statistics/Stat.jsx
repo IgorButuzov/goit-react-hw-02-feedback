@@ -1,14 +1,20 @@
 import css from "components/Statistics/Stat.module.css";
 
-export const Statistics = () => {
+const Statistics = ({isGood, isNeutral, isBad, isTotal,isPositive}) => {
     return (
+      isTotal === 0 ? 
+      <p>No feedback given</p> :
       <div className={css.statBox}>
         <p>Statistics</p>
         <ul>
-            <li>Good: 0</li>
-            <li>Neutral: 0</li>
-            <li>Bad: 0</li>
+            <li>Good: {isGood}</li>
+            <li>Neutral: {isNeutral}</li>
+            <li>Bad: {isBad}</li>
+            <li>Total: {isTotal}</li>
         </ul>
+        <p>Positive feedback: {isPositive}%</p>
       </div>
     );
   };
+
+export default Statistics
